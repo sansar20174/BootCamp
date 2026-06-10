@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .cont {
+            padding: 20px;
+            background-color: midnightblue;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: repeat(3, 100px); */
+            gap: 10px;
+              grid-template-areas: 
+                " one two three"
+                " one five five"
+                " seven eight nine";
+
+        }
+        .cont > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 2cap;
+        }
+        #one {
+            background-color: blue;
+            /* grid-area: 1 / 1 / 3 / 2; */
+            grid-area: one;
+          
+        }
+        #two {
+            background-color: coral;
+                grid-area: two;
+        }
+        #three {
+            background-color: green;
+            grid-area: three;
+        }
+        #four { 
+            background-color: pink;
+            grid-area: four;
+        }
+        #five {
+            background-color: yellow;
+            grid-area: five;
+        }
+        #six {
+            background-color: red;
+            grid-area: six;
+        }
+        #seven {
+            background-color: cyan;
+            grid-area: seven;
+        }
+        #eight {
+            background-color: goldenrod;
+            grid-area: eight;
+        }
+        #nine {
+            background-color: purple;
+            grid-area: nine;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <!-- <div id="four">4</div> -->
+        <div id="five">5</div>
+        <!-- <div id="six">6</div> -->
+        <div id="seven">7</div>
+        <div id="eight">8</div>
+        <div id="nine">9</div>
+    </div>
+    
+</body>
+</html>

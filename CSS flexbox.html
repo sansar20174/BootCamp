@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container{
+            display: flex;
+            padding: 20px;
+            background-color: aquamarine;
+            margin: 20px;
+            /* height: 200px; */
+            border: 2px solid black;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center;
+            flex-wrap: wrap; */
+        }
+        .container div{
+            width: 50px;
+            border: 1px solid red;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .container div:nth-child(1){
+            order: 4;
+            flex-grow: 1;
+            background-color: red;
+        }
+        .container div:nth-child(2){
+            order: -1;
+            flex-shrink: 1;
+            background-color: green;
+        }
+        .container div:nth-child(3){   
+            order: 1; 
+            flex-basis: 100px;
+            background-color: blue;
+        }
+    </style>
+        
+
+</head>
+<body>
+    <h1>Welcome to CSS Flexbox</h1>
+    <div class="container">
+         <div>1</div>
+         <div>2</div>
+         <div>3</div>
+         
+    </div>
+        
+</body>
+</html>

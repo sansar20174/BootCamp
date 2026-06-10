@@ -1,0 +1,84 @@
+# --> CSS Selectors 
+ A selector in a CSS is a part of the CSS ruleset, that is basically used to select
+the HTML element(s) that we want to style. 
+ 1. Universal Selector
+ 2. Element / tag Selector 
+ 3. Class Selector 
+ 4. ID Selector 
+ 5. Group Selector 
+
+# --> Priority of Selectors.
+ 1. Inline Style.            -1000
+ 2. ID Selector              -100
+ 3. Class Selector           -10 
+ 4. Element/ Tag Selector    -1
+ 5. Universal Selector       -0
+---------------------------------------------------------------------------------------------------------------------------
+
+# --> Combinators:- The CSS Combinators represent the relationship between two selector.
+
+Types of Combinators
+ 1. Descendent Combinator          :()(space)
+ 2. Child Combinator               :(>)
+ 3. General sibiling Combinator    :(~)
+ 4. Adjacent sibiling Combinator   :(+)
+---------------------------------------------------------------------------------------------------------------------------
+# --> CSS Box Model
+The CSS Box Model is a fundamental concept in web design and development that describes how elements on a
+web page are structured and how they interact with each other. It consists of several layers that define the space around an element, including its content, padding, border, and margin. Understanding the box model is crucial for controlling the layout and spacing of elements on a web page.
+
+# The Box Model consists of the following components:
+ 1. Content  :main content of the element, such as text or images.
+ 2. Padding  :Space btw 
+ 3. Border
+ 4. Margin
+---------------------------------------------------------------------------------------------------------------------------
+# Note:  
+ 1. -Padding: 10px.  
+ # means that the padding on all four sides of the element is 10 pixels.
+ 2. -padding: 10px 20px.
+ # means that the padding on the top and bottom is 10 pixels, while the padding on the left and right is 20 pixels.
+ 3. -Padding: 10px 20px 30px. 
+ # means that the padding on the top is 10 pixels, the padding on the left and right is 20 pixels, and the padding on the bottom is 30 pixels.
+ 4. -Padding: 10px 20px 30px 40px. 
+ # means that the padding on the top is 10 pixels, the padding on the right is 20 pixels, the padding on the bottom is 30 pixels, and the padding on the left is 40 pixels.
+---------------------------------------------------------------------------------------------------------------------------
+# -->            CSS Flexbox Properties
+                            |
+            --------------------------------
+            ⬇                             ⬇
+    Parent Properties:              Child Properties:
+        flex-direction                  order   
+        flex-wrap                       flex-grow
+        justify-content                 flex-shrink
+        align-items                     flex-basis
+        align-content
+---------------------------------------------------------------------------------------------------------------------------
+# --> CSS GRID
+* display
+* grid-templete-columns
+* grid-templete-rows
+* gap
+* repeat()
+* grid-area
+* line-based placement/grid-lines
+* grid-templete-area
+* units
+---------------------------------------------------------------------------------------------------------------------------
+# Note: Margin: Auto and Grid
+When you set margin: auto on a grid item, it will center itself within the grid cell both horizontally and vertically. This is because the auto value for margin allows the item to take up any remaining space in the grid cell, effectively centering it.
+---------------------------------------------------------------------------------------------------------------------------
+# Responsive Web Design 
+Responsive web design is an approach to web development that aims to create websites that provide an optimal viewing experience across a wide range of devices, from desktop computers to mobile phones. The goal of responsive web design is to ensure that a website's layout and content adapt seamlessly to different screen sizes and orientations, providing users with a consistent and user-friendly experience regardless of the device they are using.
+
+---------------------------------------------------------------------------------------------------------------------------
+# --> CSS Positioning
+* position: static
+* position: relative
+* position: absolute:
+   1. take space only based on the its content and its size.
+   2. position itself based on the nearest positioned ancestor (relative, absolute, fixed, or sticky).
+* position: fixed
+* position: sticky
+---------------------------------------------------------------------------------------------------------------------------
+# Pseudo-classes and Pseudo-elements
