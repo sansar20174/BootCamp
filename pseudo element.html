@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element</title>
+    <style>
+        /* Example of a pseudo-element */
+        h1::before {
+            content: "Hello, ";
+            color: blue;
+        }
+        h1::after {
+            content: "✅";
+            color: green;
+        }
+        p::first-letter {
+            font-size: 200%;
+            color: red;
+        }
+        p::first-line {
+            font-weight: bold;
+        }
+            ul>li::marker {
+                color: orange;
+            }
+    </style>
+</head>
+<body>
+    <h1>Pseudo element</h1>
+    <p>Pseudo-elements are used to style specific parts of an element. They are denoted by a double colon (::) followed by the name of the pseudo-element. Some common pseudo-elements include:</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+</body>
+</html>

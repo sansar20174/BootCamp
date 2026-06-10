@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        @keyframes chintu {
+            from {
+                background-color: goldenrod;
+                transform: rotate(0deg);
+            }
+            to {
+                background-color: lightblue;
+                transform: rotate(360deg);
+            }
+        }
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: goldenrod;
+            animation-name: chintu;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            margin: auto;    
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }            
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+    
+</body>
+</html>

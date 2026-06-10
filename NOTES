@@ -81,4 +81,46 @@ Responsive web design is an approach to web development that aims to create webs
 * position: fixed
 * position: sticky
 ---------------------------------------------------------------------------------------------------------------------------
-# Pseudo-classes and Pseudo-elements
+# Pseudo-classes
+Pseudo-classes are used to define a special state of an element. They are typically used to style elements based on user interaction or their position in the document tree. Pseudo-classes are denoted by a colon (:) followed by the name of the pseudo-class.
+Some common pseudo-classes include:
+* :hover - applies when the user hovers over an element.
+* :active - applies when an element is being activated (e.g., clicked).
+* :focus - applies when an element has focus (e.g., an input field).
+* :checked - applies when a checkbox or radio button is checked.
+---------------------------------------------------------------------------------------------------------------------------
+# Pseudo-elements
+Pseudo-elements are used to style specific parts of an element. They are denoted by a double colon (::) followed by the name of the pseudo-element. Some common pseudo-elements include:
+* ::before - allows you to insert content before an element.
+* ::after - allows you to insert content after an element.
+* ::first-letter - styles the first letter of an element.
+* ::first-line - styles the first line of an element. 
+---------------------------------------------------------------------------------------------------------------------------
+# CSS Transitions
+CSS transitions allow you to create smooth animations when CSS properties change. They are defined using the transition property, which specifies the CSS properties to transition, the duration of the transition, and the timing function that controls the speed of the transition. For example:
+```css
+.element {
+  transition: all 0.3s ease;
+}
+```
+---------------------------------------------------------------------------------------------------------------------------
+# CSS Transforms   
+CSS transforms allow you to modify the coordinate space of an element, enabling you to rotate, scale, skew, or translate it. The transform property is used to apply these transformations. For example:
+```css
+.element {
+  transform: rotate(45deg) scale(1.5);transform: translate(50px, 100px) skew(20deg, 10deg);
+}                  
+```
+---------------------------------------------------------------------------------------------------------------------------
+# CSS Animations
+CSS animations allow you to create complex animations by defining keyframes that specify the styles at different points during the animation. The animation property is used to apply the animation to an element. For example:
+```css
+@keyframes example {
+        from {background-color: red;}
+        to {background-color: yellow;}
+}       
+.element {
+  animation: example 5s infinite;
+}
+```
+---------------------------------------------------------------------------------------------------------------------------
