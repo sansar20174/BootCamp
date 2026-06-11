@@ -76,3 +76,111 @@ let numbers = [1, 2, 3, 4, 5]; // array
 let greet = function(a, b){return a + b;} { // function
   console.log("Hello, " + name);
 };
+```
+---------------------------------------------------------------------------------------------------------------------------
+# Difference btw null and undefined:
+- `null` is an assignment value that represents the intentional absence of any object value.
+-(`Explicitely` set by the programmer to indicate that a variable should have no value.)
+- `undefined` is a variable that has been declared but has not been assigned a value.
+(`Implicitly` set by JavaScript when a variable is declared by not assigned a value, or when a function does not return a value.)
+
+---------------------------------------------------------------------------------------------------------------------------
+# Why use return in a function?
+The `return` statement is used in a function to specify the value that should be returned to the caller when the function is executed. It allows you to output a value from the function and use it in other parts of your code. Without a return statement, a function will return `undefined` by default. Using `return` allows you to capture the result of a function and use it for further processing or to pass it to other functions. 
+---------------------------------------------------------------------------------------------------------------------------
+# Arthmetic Operations
+JavaScript supports various arithmetic operations, including:
+- Addition (`+`): Adds two numbers together.
+- Subtraction (`-`): Subtracts one number from another.
+- Multiplication (`*`): Multiplies two numbers together.
+- Division (`/`): Divides one number by another.
+- Modulus (`%`): Returns the remainder of a division operation.
+- Exponentiation (`**`): Raises a number to the power of another number.
+- Math functions: JavaScript also provides built-in Math functions for more complex mathematical operations, such as
+
+  - `Math.round(x)`: Rounds x to the nearest integer.
+  - `Math.floor(x)`: Rounds x down to the nearest integer.  
+  - `Math.ceil(x)`: Rounds x up to the nearest integer.
+
+---------------------------------------------------------------------------------------------------------------------------
+# Relational Operators
+Relational operators are used to compare two values and return a boolean result. The common relational operators in JavaScript include:
+- Greater than (`>`): Returns true if the left operand is greater than the right operand.
+- Less than (`<`): Returns true if the left operand is less than the right operand.
+- Greater than or equal to (`>=`): Returns true if the left operand is greater than or equal to the right operand.
+- Less than or equal to (`<=`): Returns true if the left operand is less than or equal to the right operand.
+
+---------------------------------------------------------------------------------------------------------------------------
+# Comparison Operators
+Comparison operators are used to compare two values and return a boolean result. The common comparison operators in
+JavaScript include:
+- Equality (`==`): Returns true if the values of the operands are equal, after type coercion.
+- Strict equality (`===`): Returns true if the values and types of the operands are equal, without type coercion.
+
+`(coercion means JavaScript will try to convert the values to a common type before comparing them.)`
+
+Example:
+```javascript
+console.log(5 == '5'); // true (type coercion occurs)
+console.log(5 === '5'); // false (no type coercion, different types)
+console.log(.1 + 0.2 == 0.3); // true (type coercion occurs)
+console.log(.1 + 0.2 === 0.3); // false (no type coercion, different types)
+console.log(.15 + 0.15 == 0.3); // true (type coercion occurs)
+```
+Why does `.1 + 0.2 === 0.3` return false? but .1 + 0.2 == 0.3 returns true?
+- This is because of the way JavaScript handles floating-point arithmetic. 
+- When you perform the operation `.1 + 0.2`, it results in a value that is very close to 0.3, but not exactly equal to it due to the limitations of representing decimal numbers in binary. 
+
+When you use the `==` operator, JavaScript performs type coercion and considers the two values equal because they are close enough. However, when you use the `===` operator, it checks for both value and type equality without coercion, and since the result of `.1 + 0.2` is not exactly equal to 0.3, it returns false.
+---------------------------------------------------------------------------------------------------------------------------
+# TYPE CASTING
+- Type casting is the process of converting a value from one data type to another for a specific purpose. In JavaScript, type casting can be done explicitly or implicitly.
+
+- `Rule 1`: 0 is falsy, while any non-zero number is truthy.
+```javascript
+console.log(0 == false); // true (type coercion occurs)
+console.log(1 == true); // true (type coercion occurs)
+
+console.log(0 == true); // false (type coercion occurs)
+console.log(1 == false); // false (type coercion occurs)
+```
+- `Rule 2`: An empty string is falsy, while any non-empty string is truthy.
+```javascript
+console.log((1>4) == ""); // false
+console.log((1>4) == "Hello"); // false (type coercion occurs, but the empty string is falsy)
+console.log(("Hello")); // true
+```
+- `Rule 3`: null and undefined are falsy. But when use them in a single line, they are truthy.
+```javascript 
+console.log(null == false); // false
+console.log(undefined == false); // false
+console.log(null == undefined); // true (because null || undefined evaluates to undefined, which is falsy, but the Boolean function converts it to true)
+```
+- `Rule 4`: NaN (Not a Number) is falsy. Even if you try to convert it to a boolean, it will still be falsy.
+```javascript
+console.log(NaN == NaN); // false
+console.log(123 == NaN); // false
+```
+---------------------------------------------------------------------------------------------------------------------------
+# Falsy Values in JavaScript
+In JavaScript, the following values are considered falsy:
+- `false`
+- `0` (zero)
+- `""` (empty string)
+- `null`
+- `undefined`
+- `NaN` (Not a Number)
+
+---------------------------------------------------------------------------------------------------------------------------
+# Logical Operators
+Logical operators are used to combine or invert boolean values. The common logical operators in JavaScript include
+- Logical AND (`&&`): Returns true if both operands are true, otherwise returns false. 
+it always search for falsy value, if it find any falsy value then it returns that value. Otherwise it returns the last value.
+- Logical OR (`||`): Returns true if at least one of the operands is true,otherwise returns false.
+And if it doesn't find any truthy value then it returns the last falsy value.
+- Logical NOT (`!`): Returns true if the operand is false, and false if the operand is true. 
+
+# Priority of Logical Operators:[ ! > && > || ]
+1. Logical NOT (`!`)
+2. Logical AND (`&&`)
+3. Logical OR (`||`)
