@@ -1,0 +1,78 @@
+# Introduction to JavaScript
+JavaScript is a versatile programming language that is primarily used for web development. It is a high-level, interpreted language that allows developers to create interactive and dynamic web pages. JavaScript can be used for both client-side(Browser, It is also work as compiler between the Browser and JavaScript) and server-side development, making it a popular choice for building web applications.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# History of JavaScript
+JavaScript was created in 1995 by Brendan Eich while he was working at Netscape Communications Corporation. It was originally developed in just 10 days and was initially called Mocha, then renamed to LiveScript, and finally to JavaScript.
+
+Mocha was the original name of the language, but it was changed to LiveScript to reflect its dynamic nature. 
+Now it official name is EcmaScript, but it is commonly referred to as JavaScript.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# Node.js in JavaScript
+Node.js is a runtime environment that allows developers to run JavaScript on the server side. It is built on Chrome's V8 JavaScript engine and provides an event-driven, non-blocking I/O model that makes it efficient and scalable for building server-side applications. Node.js is commonly used for building web servers, APIs, and real-time applications.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# NOTE:- cd commands:
+- `cd` - Change directory
+- `cd ..` - Move up one directory 
+- `cd ~` - Move to the home directory
+- `cd -` - Move to the previous directory
+- `cd /` - Move to the root directory
+- `cd <directory_name>` - Move to a specific directory
+- `cd ../<directory_name>` - Move up one directory and then into a specific directory
+- `cd ../../<directory_name>` - Move up two directories and then into a specific directory
+- `cd /path/to/directory` - Move to a specific directory using an absolute path
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# Variables 
+In JavaScript, variables are used to store data values. There are three ways to declare a variable: `var`, `let`, and `const`.
+- `var` is the oldest way to declare a variable and has function scope. It can be re-declared and updated.
+
+- `let` is a newer way to declare a variable and has block scope. It can be updated but not re-declared within the same scope.
+- `const` is used to declare a constant variable that cannot be updated or re-declared. It also has block scope.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# Table of Variable Declarations:
+      | Keyword | Scope       | Re-declarable | Updatable |
+      |---------|-------------|---------------|-----------|
+      | var     | Function    | Yes           | Yes       |
+      | let     | Block       | No            | Yes       |
+      | const   | Block       | No            | No        |
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# Data Types
+JavaScript has several data types, including:
+- Primitive data types: (or inbuilt data types, or `value data types`)
+- `string` is used to represent text and is enclosed in single or double quotes.
+- `number` is used to represent numeric values, including integers and floating-point numbers.
+- `boolean` is used to represent logical values, either true or false.
+- `null` represents the intentional absence of any object value.
+- `undefined` represents a variable that has been declared but has not been assigned a value.
+
+- Non-primitive data types: (or reference data types, or `object data types`)
+- `object` is a collection of key-value pairs and can represent complex data structures.
+- `array` is a special type of object that is used to store ordered collections of values
+- `function` is a block of code that can be defined and executed when called.
+
+# Example of data types:
+```javascript
+<!-- Primitive Data Types -->
+let name = "John"; // string
+let age = 30; // number
+let isStudent = true; // boolean
+let address = null; // null
+let phoneNumber; // undefined
+
+<!-- Non-Primitive Data Types -->
+let person = { name: "John", age: 30 }; // object
+let numbers = [1, 2, 3, 4, 5]; // array
+let greet = function(a, b){return a + b;} { // function
+  console.log("Hello, " + name);
+};
