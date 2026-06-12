@@ -184,3 +184,136 @@ And if it doesn't find any truthy value then it returns the last falsy value.
 1. Logical NOT (`!`)
 2. Logical AND (`&&`)
 3. Logical OR (`||`)
+
+---------------------------------------------------------------------------------------------------------------------------
+# Loops
+Loops are used to execute a block of code repeatedly until a certain condition is met. The common types of loops in JavaScript include:
+- `for` loop
+- `while` loop
+- `do...while` loop
+- `for...in` loop (used for iterating over the properties of an object)
+- `for...of` loop (used for iterating over iterable objects like arrays)
+
+---------------------------------------------------------------------------------------------------------------------------
+# Array Data Type
+- An array is a special type of object that stores any type of data in an ordered collection. Arrays are created using square brackets `[]` and can hold multiple values.
+
+- It has dynamic size, which means you can add or remove elements from an array without having to specify its size in advance. 
+
+- Contiguous memory location, which allows for efficient access to elements using their index.
+
+- Indexing starts from 0, which means the first element of an array is accessed using index 0, the second element using index 1, and so on.
+
+- Ordered Memory Allocation, which means that the elements of an array are stored in contiguous memory locations, allowing for efficient access and manipulation of the array elements.
+
+- Mutable, which means you can change the values of elements in an array after it has been created.
+ - >   (inbuilt functions that is used to change the values of elements in an array are `push()`, `pop()`, `shift()`, `unshift()`, `splice()`, etc.)
+
+- Non-primitive data type, which means that arrays are objects and can hold references to other objects or values.
+
+# Properties and methods of arrays include:
+- `length`: Returns the number of elements in the array.
+- `push()`: Adds one or more elements to the end of the array and returns the new length of the array.
+- `pop()`: Removes the last element from the array and returns that element.
+- `shift()`: Removes the first element from the array and returns that element.
+- `unshift()`: Adds one or more elements to the beginning of the array and returns the new length of the array.
+- `indexOf()`: Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+- `slice()`: Returns a shallow copy of a portion of an array into a new array object.
+- `splice()`: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+---------------------------------------------------------------------------------------------------------------------------
+# CRUD operations on arrays:
+- Create: You can create an array using square brackets `[]` and add elements to it
+- Read: You can access elements of an array using their index
+- Update: You can update elements of an array by assigning a new value to a specific index
+- Delete: You can remove elements from an array using methods like `pop()`, `shift()`, or `splice()`
+
+# Example of CRUD operations on arrays:
+```javascript
+// Create
+let fruits = ["apple", "banana", "cherry"];
+
+// Read
+console.log(fruits[0]); // Output: "apple"
+
+// Update
+fruits[1] = "blueberry";
+console.log(fruits); // Output: ["apple", "blueberry", "cherry"]
+
+unshift() method is used to add an element at the beginning of the array
+
+fruits.unshift("orange");
+console.log(fruits); // Output: ["orange", "apple", "blueberry", "cherry"]
+
+push() method is used to add an element at the end of the array
+fruits.push("grape");
+console.log(fruits); // Output: ["orange", "apple", "blueberry", "cherry", "grape"]
+
+
+
+// Delete
+fruits.pop(); // Removes the last element
+console.log(fruits); // Output: ["orange", "apple", "blueberry", "cherry"]
+
+shift() method is used to remove the first element of the array
+fruits.shift(); // Removes the first element
+console.log(fruits); // Output: ["apple", "blueberry", "cherry"]
+
+// Using splice() to remove an element at a specific index
+fruits.splice(1, 1); // Removes 1 element at index 1
+console.log(fruits); // Output: ["apple", "cherry"]
+```
+---------------------------------------------------------------------------------------------------------------------------
+# Loops on arrays:
+- You can use loops to iterate over the elements of an array and perform operations on them.
+
+- Common loops used with arrays include `for`, `for...of`, and `forEach()`.
+
+```javascript
+let fruits = ["apple", "banana", "cherry"]; 
+// Using a for loop
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+``` 
+---------------------------------------------------------------------------------------------------------------------------
+# String Data Type
+
+- A string is a sequence of characters enclosed in single quotes (`'`), double quotes (`"`), or backticks (`` ` ``). Strings are used to represent text in JavaScript.
+
+- Strings are immutable, which means that once a string is created, it cannot be changed. However, you can create a new string by concatenating or manipulating existing strings.
+
+- Strings are value data types, which means that when you assign a string to a variable, it creates a copy of the string value rather than a reference to the original string.
+
+- String are collection/ group of characters: alphabet, numbers, symbols, spaces, etc.
+
+- Strings are contegemous memory allocation, which means that the characters of a string are stored in contiguous memory locations, allowing for efficient access and manipulation of the string characters.
+
+- Strings are ordered, which means that the characters in a string have a specific order and can be accessed using their index. The first character of a string is accessed using index 0, the second character using index 1, and so on.
+
+---------------------------------------------------------------------------------------------------------------------------
+# Object Data Type
+- An object is a collection of key-value pairs, where each key is a string (or symbol) and each value can be of any data type. Objects are used to represent complex data structures and can contain properties and methods.
+
+- Objects are mutable, which means you can change the properties and values of an object after it has been created.
+
+- Objects are key-value pairs, where the key is a string (or symbol) that identifies a property, and the value can be of any data type, including other objects or functions.
+
+- Objects are non-primitive data types, which means that they are stored as references in memory. When you assign an object to a variable, it creates a reference to the original object rather than a copy of the object.
+
+- Keys in an object are unique, which means that each key can only appear once in an object. If you try to add a property with a key that already exists, it will overwrite the existing property. But values can be duplicated, which means that multiple keys can have the same value in an object.
+
+- Objects are dynamic, which means that you can add, modify, or delete properties from an object at any time.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Diagram of Reference Data Types:
+
+    main memory
+
+|                  |
+|                  |
+|                  |
+|                  |
+|------------------|
+|       Object.    |  <--- reference to the object
+|------------------|
