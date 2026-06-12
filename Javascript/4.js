@@ -57,25 +57,61 @@
 
 // Question 1: What will be the output of the following code? 
 
-let arr = [1, 2, 3, 4, 5];
-let arr1 = arr; 
+// let arr = [1, 2, 3, 4, 5];
+// let arr1 = arr; 
 
-arr1.push(6);
-arr.pop();
+// arr1.push(6);
+// arr.pop();
 
-console.log(arr);
-console.log(arr1);
+// console.log(arr);
+// console.log(arr1);
 
-// Output:
-// [1, 2, 3, 4, 5]
-// [1, 2, 3, 4, 5]
+// // Output:
+// // [1, 2, 3, 4, 5]
+// // [1, 2, 3, 4, 5]
 
-// Question 2: What will be the output of the following code?
+// // Question 2: What will be the output of the following code?
 
-let str = "Hello";
-let str1 = str;
+// let str = "Hello";
+// let str1 = str;
 
-str1 = " World";
+// str1 = " World";
 
-console.log(str, str1);
+// console.log(str, str1);
 
+// //  Funtion in JavaScript
+
+// // 1. Function Declaration
+
+// // a.) Function with no parameters.
+// function greet() {
+//     console.log("Hello, World!");
+// }
+// // 2. Function calling
+// greet(); 
+// greet();
+
+// // b.) Function with parameters.
+// function add(a, b) {
+//     console.log(a + b);
+// }
+// add(2, 3); // 5
+// add(10, 20); // 30
+
+// // c.) Function with parameter and return statement.
+// function multiply(a, b) {
+//     return a * b;
+// }
+// let result = multiply(4, 5);
+// console.log(result); // 20
+
+// // 3.) Function with expression
+// let x = function (a) {
+//     return a * 5;
+// }
+// console.log(x(2)); // 10
+
+// Arrow Functions
+
+const add = a => a + 5;
+console.log(add(2)); // 7

@@ -306,7 +306,7 @@ for (let i = 0; i < fruits.length; i++) {
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-Diagram of Reference Data Types:
+# Diagram of Reference Data Types:
 
     main memory
 
@@ -315,5 +315,42 @@ Diagram of Reference Data Types:
 |                  |
 |                  |
 |------------------|
-|       Object.    |  <--- reference to the object
+|      Object.     |  <--- reference to the object
 |------------------|
+
+---------------------------------------------------------------------------------------------------------------------------
+# Function Data Type
+
+Function is a reusable block of code that performs a specific task. 
+---------------------------------------------------------------------------------------------------------------------------
+## Regular function
+- is a block of code that can be defined and executed when called. It can take parameters and return a value.
+---------------------------------------------------------------------------------------------------------------------------
+
+1. Function Declaration: A function can be declared using the `function` keyword followed by the function name and parentheses. The function body is enclosed in curly braces `{}`.
+```javascript
+function greet() {
+  console.log("Hello from JS");
+}
+```
+- Function with No Parameters: The above example is a function declaration without any parameters. It simply logs a message to the console when called.
+
+- Function with Parameters: You can also declare a function that takes parameters, which are placeholders for values that will be passed to the function when it is called.
+
+- Function with Return Value: A function can also return a value using the `return` statement. This allows you to capture the result of the function and use it in other parts of your code.
+
+
+2. Function Expression: A function can also be defined as an expression and assigned to a variable. This is known as a function expression.
+```javascript
+const greet = function() {
+  console.log("Hello from JS");
+};
+```
+---------------------------------------------------------------------------------------------------------------------------
+## Arrow Function: 
+Arrow functions are a more concise syntax for writing function expressions. They are defined using the `=>` syntax and do not have their own `this` context.
+```javascript
+const greet = () => {
+  console.log("Hello from JS");
+};
+```
