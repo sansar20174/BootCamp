@@ -23,9 +23,9 @@
 
 // or operator
 
-console.log("ram" || "shyam" || 0.5 || "" || "mukesh");
+// console.log("ram" || "shyam" || 0.5 || "" || "mukesh");
 
-console.log("null" || "shyam" || 0 || false || "mukesh");
+// console.log("null" || "shyam" || 0 || false || "mukesh");
 
-console.log("ram" || "shyam" || 0.5 || "hello" || "mukesh");
+// console.log("ram" || "shyam" || 0.5 || "hello" || "mukesh");
 
