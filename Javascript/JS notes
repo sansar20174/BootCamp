@@ -80,7 +80,7 @@ let greet = function(a, b){return a + b;} { // function
 ---------------------------------------------------------------------------------------------------------------------------
 # Difference btw null and undefined:
 - `null` is an assignment value that represents the intentional absence of any object value.
--(`Explicitely` set by the programmer to indicate that a variable should have no value.)
+- `Explicitely` set by the programmer to indicate that a variable should have no value.)
 - `undefined` is a variable that has been declared but has not been assigned a value.
 (`Implicitly` set by JavaScript when a variable is declared by not assigned a value, or when a function does not return a value.)
 
