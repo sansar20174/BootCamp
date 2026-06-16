@@ -1,0 +1,37 @@
+<!-- Local Storage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // 1. Save/ Write data to local storage
+    localStorage.setItem("name", "SANSAR");
+    localStorage.setItem("age", 22);
+    
+    // 2. Read data from local storage
+    let nm = localStorage.getItem("name");
+    let ag = localStorage.getItem("age");
+    console.log(nm, ag);    
+
+    // 3. Remove data from local storage
+    // localStorage.removeItem("age");
+
+    // 4. Clear all data from local storage
+    // localStorage.clear();
+
+    // Store through JSON
+
+    localStorage.setItem("hobbies", JSON.stringify(["1,2,3"]));
+    let hb = JSON.parse(localStorage.getItem("hobbies"));
+    console.log(hb[1], typeof hb);
+
+</script>
