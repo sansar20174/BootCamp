@@ -1,4 +1,0 @@
-# DOM (Document Object Model)
-- Html ke document ko JS ke object mein convert karke object model banata hai. Isse hum HTML elements ko programmatically manipulate kar sakte hain.
-----------------------------------------------------------------------------------------------------
-
