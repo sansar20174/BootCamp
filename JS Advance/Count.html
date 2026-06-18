@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Value With promises</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    var count = 10;
+    // 1. Creating a promise
+    var promise = new Promise((Babita, Jethalal) => {
+   
+    // 2. Consuming a promise
+    if (count > 0) {
+        if (count > 0) {
+            return Babita("Count is greater than 0");
+        } else {
+            return Jethalal("Count is less than 0");
+        }
+    } 
+})
+promise.then((res) => {
+    console.log(res);
+}).catch((rej) => {
+    console.log(rej);
+});
+</script>

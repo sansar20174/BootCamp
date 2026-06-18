@@ -1,35 +1,27 @@
-// Step 1:  Select/Catch the form
+const apiUrl = "https://jsonplaceholder.typicode.com/todos";
 
-document.querySelector("form").addEventListener("submit", getDetails);
+fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {console.log(data);})
+        .catch((error) => {console.error('Error fetching data:', error);});
 
-// Step 2:  
 
-function getDetails(e) {
-    e.preventDefault();
-    let name = document.querySelector("#task").value;
-    let priority = document.querySelector("#priority").value;
-
-    // console.log(name, priority);
-
-    let taskObj = { name, priority };
-
-    console.log(taskObj);
-    displayTable(taskObj);
-}
-
-function displayTable(taskObj) {
+function displayTable(el) {
     const row = document.createElement("tr");
 
     const td1 = document.createElement("td");
-    td1.innerText = taskObj.name;
+    td1.innerText = el.id;
 
     const td2 = document.createElement("td");
-    td2.innerText = taskObj.priority;
+    td2.innerText = el.userId;
 
     const td3 = document.createElement("td");
-    td3.innerText = "add";
+    td3.innerText = el.title;
+    
+    const td4 = document.createElement("td");
+    td4.innerText = el.completed;
 
-    row.append(td1, td2, td3);
+    row.append(td1, td2, td3, td4);
     document.querySelector("tbody").append(row);
 
 }

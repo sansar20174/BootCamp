@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // Fetch API Example
+    const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+
+    // const data = fetch(apiUrl)
+    // console.log(data)
+
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {console.log(data);})
+        .catch((error) => {console.error('Error fetching data:', error);});
+// .then use 2 times to first convert the response to JSON and then 
+// process the JSON data
+// .api keys give you access to the data from the API
+
+</script>
