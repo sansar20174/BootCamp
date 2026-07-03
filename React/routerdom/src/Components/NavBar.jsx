@@ -1,7 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function NavBar() {
-  const Links = [
+  const links = [
     { path: "/", title: "Home" },
     { path: "/about", title: "About" },
     { path: "/login", title: "Login" },
@@ -9,34 +9,29 @@ export default function NavBar() {
     { path: "/user", title: "User" },
   ];
 
-  const activestyle = { textDecoration: "none", color: "red" };
-  const inActivestyle = { textDecoration: "none", color: "blue" };
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
-      {/* Step 1 */}
-      {/* <Link to="/">Home</Link>
-      <Link to={"/about"}>About</Link>
-      <Link to={"/login"}>Login</Link>
-      <Link to={"/logout"}>Logout</Link>
-      <Link to={"/user"}>User</Link> */}
-      {/* <a href="/google">Google</a> */}
+    <header className="site-header">
+      <Link className="site-brand" to="/">
+        <span className="site-brand-mark">R</span>
+        <span>
+          <strong>React Router</strong>
+          <small>Practice layout</small>
+        </span>
+      </Link>
 
-      {/* Step -2 
-      {Links.map(({ path, title }) => (
-        <Link to={path}>{title}</Link>
-      ))} */}
-
-      {/* Step -3  */}
-      {Links.map(({ path, title }) => (
-        <NavLink
-          to={path}
-          style={({ isActive }) => {
-            return isActive ? activestyle : inActivestyle;
-          }}
-        >
-          {title}
-        </NavLink>
-      ))}
-    </div>
+      <nav className="site-nav" aria-label="Primary">
+        {links.map(({ path, title }) => (
+          <NavLink
+            key={path}
+            to={path}
+            className={({ isActive }) =>
+              `site-nav-link${isActive ? " is-active" : ""}`
+            }
+          >
+            {title}
+          </NavLink>
+        ))}
+      </nav>
+    </header>
   );
 }
